@@ -1,9 +1,9 @@
 <?php
 
-namespace Encore\Admin\LockScreen\Http\Controllers;
+namespace Dedermus\Admin\LockScreen\Http\Controllers;
 
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\LockScreen\LockScreen;
+use Dedermus\Admin\Facades\Admin;
+use Dedermus\Admin\LockScreen\LockScreen;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Hash;

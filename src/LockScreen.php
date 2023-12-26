@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\Admin\LockScreen;
+namespace Dedermus\Admin\LockScreen;
 
-use Encore\Admin\Extension;
+use Dedermus\Admin\Extension;
 
 class LockScreen extends Extension
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\Admin\LockScreen\Http\Middleware;
+namespace Dedermus\Admin\LockScreen\Http\Middleware;
 
-use Encore\Admin\LockScreen\LockScreen as Extension;
+use Dedermus\Admin\LockScreen\LockScreen as Extension;
 use Illuminate\Http\Request;
 
 class LockScreen

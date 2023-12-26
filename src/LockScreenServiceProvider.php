@@ -1,10 +1,10 @@
 <?php
 
-namespace Encore\Admin\LockScreen;
+namespace Dedermus\Admin\LockScreen;
 
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\LockScreen\Http\Middleware\LockScreen as Middleware;
-use Encore\Admin\Widgets\Navbar;
+use Dedermus\Admin\Facades\Admin;
+use Dedermus\Admin\LockScreen\Http\Middleware\LockScreen as Middleware;
+use Dedermus\Admin\Widgets\Navbar;
 use Illuminate\Support\ServiceProvider;
 
 
