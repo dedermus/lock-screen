@@ -1,8 +1,8 @@
 <?php
 
-namespace Dedermus\Admin\LockScreen\Http\Middleware;
+namespace OpenAdminCore\Admin\LockScreen\Http\Middleware;
 
-use Dedermus\Admin\LockScreen\LockScreen as Extension;
+use OpenAdminCore\Admin\LockScreen\LockScreen as Extension;
 use Illuminate\Http\Request;
 
 class LockScreen

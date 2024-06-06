@@ -1,8 +1,8 @@
 <?php
 
-namespace Dedermus\Admin\LockScreen;
+namespace OpenAdminCore\Admin\LockScreen;
 
-use Dedermus\Admin\Extension;
+use OpenAdminCore\Admin\Extension;
 
 class LockScreen extends Extension
 {

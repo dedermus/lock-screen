@@ -1,10 +1,10 @@
 <?php
 
-namespace Dedermus\Admin\LockScreen;
+namespace OpenAdminCore\Admin\LockScreen;
 
-use Dedermus\Admin\Facades\Admin;
-use Dedermus\Admin\LockScreen\Http\Middleware\LockScreen as Middleware;
-use Dedermus\Admin\Widgets\Navbar;
+use OpenAdminCore\Admin\Facades\Admin;
+use OpenAdminCore\Admin\LockScreen\Http\Middleware\LockScreen as Middleware;
+use OpenAdminCore\Admin\Widgets\Navbar;
 use Illuminate\Support\ServiceProvider;
 
 

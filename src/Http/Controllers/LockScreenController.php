@@ -1,9 +1,9 @@
 <?php
 
-namespace Dedermus\Admin\LockScreen\Http\Controllers;
+namespace OpenAdminCore\Admin\LockScreen\Http\Controllers;
 
-use Dedermus\Admin\Facades\Admin;
-use Dedermus\Admin\LockScreen\LockScreen;
+use OpenAdminCore\Admin\Facades\Admin;
+use OpenAdminCore\Admin\LockScreen\LockScreen;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Hash;
