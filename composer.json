@@ -3,7 +3,7 @@
     "description": "Lock-screen page for open-admin",
     "type": "library",
     "keywords": ["open-admin", "extension", "lock screen"],
-    "homepage": "https://github.com/dedermus/helpers.git",
+    "homepage": "https://github.com/dedermus/lock-screen",
     "license": "MIT",
     "authors": [
         {
@@ -12,8 +12,8 @@
         }
     ],
     "require": {
-        "php": "^7.3|^8.0",
-        "dedermus/open-admin-core": "~1.0"
+        "php": "^8.2",
+        "dedermus/open-admin-core": "^v2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.0"
