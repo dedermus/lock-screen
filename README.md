@@ -19,7 +19,7 @@ Then add a middleware `admin.lock` to routes configuration in `config/admin.php`
 
     'route' => [
 
-        'prefix' => 'demo',
+        'prefix' => env('ADMIN_ROUTE_PREFIX', 'admin'),
 
         'namespace'     => 'App\\Admin\\Controllers',
 

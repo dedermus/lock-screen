@@ -6,16 +6,90 @@
     <title>{{config('admin.title')}} | Lockscreen</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="stylesheet" href="{{ admin_asset("/vendor/laravel-admin/AdminLTE/bootstrap/css/bootstrap.min.css") }}">
-    <link rel="stylesheet" href="{{ admin_asset("/vendor/laravel-admin/font-awesome/css/font-awesome.min.css") }}">
-    <link rel="stylesheet" href="{{ admin_asset("/vendor/laravel-admin/AdminLTE/dist/css/AdminLTE.min.css") }}">
+    @if(!is_null($favicon = Admin::favicon()))
+        <link rel="shortcut icon" href="{{$favicon}}">
+    @endif
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="//oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <link rel="stylesheet" href="{{ Admin::asset("open-admin/css/styles.css")}}">
+    <script src="{{ Admin::asset("bootstrap5/bootstrap.bundle.min.js")}}"></script>
     <![endif]-->
+    <style>
+        hold-transition .content-wrapper, body.hold-transition .right-side, body.hold-transition .main-footer, body.hold-transition .main-sidebar, body.hold-transition .left-side, body.hold-transition .main-header > .navbar, body.hold-transition .main-header .logo {
+            -webkit-transition: none;
+            -o-transition: none;
+            transition: none
+        }
+        .lockscreen {
+            background: #d2d6de
+        }
+
+        .lockscreen-logo {
+            font-size: 35px;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 300
+        }
+
+        .lockscreen-logo a {
+            color: #444
+        }
+
+        .lockscreen-wrapper {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 10%
+        }
+
+        .lockscreen .lockscreen-name {
+            text-align: center;
+            font-weight: 600
+        }
+
+        .lockscreen-item {
+            border-radius: 4px;
+            padding: 0;
+            background: #fff;
+            position: relative;
+            margin: 10px auto 30px auto;
+            width: 290px
+        }
+
+        .lockscreen-image {
+            border-radius: 50%;
+            position: absolute;
+            left: -10px;
+            top: -25px;
+            background: #fff;
+            padding: 5px;
+            z-index: 10
+        }
+
+        .lockscreen-image > img {
+            border-radius: 50%;
+            width: 70px;
+            height: 70px
+        }
+
+        .lockscreen-credentials {
+            margin-left: 70px
+        }
+
+        .lockscreen-credentials .form-control {
+            border: 0
+        }
+
+        .lockscreen-credentials .btn {
+            background-color: #fff;
+            border: 0;
+            padding: 0 10px
+        }
+
+        .lockscreen-footer {
+            margin-top: 10px
+        }
+
+
+    </style>
 </head>
 <body class="hold-transition lockscreen">
 
@@ -25,7 +99,7 @@
         <a href="#">{{config('admin.name')}}</a>
     </div>
     <!-- User name -->
-    <div class="lockscreen-name">{{ Admin::user()->name }}</div>
+    <div class="lockscreen-name" style="text-align: center">{{ Admin::user()->name }}</div>
 
     <!-- START LOCK SCREEN ITEM -->
     <div class="lockscreen-item">
@@ -36,15 +110,13 @@
         <!-- /.lockscreen-image -->
         <!-- lockscreen credentials (contains the form) -->
         <form class="lockscreen-credentials" method="post" action="{{ route('laravel-admin-unlock') }}">
-            <div class="input-group">
+            <div class="input-group mb-3">
 
                 <input type="password" class="form-control" {{ old('password') ? 'style=color:red;' : '' }} placeholder="{{ trans('admin.password') }}" name="password" value="{{ old('password') }}"/>
 
                 {{ csrf_field() }}
+                <button type="submit" class="btn btn-outline-secondary"><i class="icon-sign-in-alt text-muted"></i></button>
 
-                <div class="input-group-btn">
-                    <button type="submit" class="btn"><i class="fa fa-arrow-right text-muted"></i></button>
-                </div>
             </div>
         </form>
         <!-- /.lockscreen credentials -->
@@ -55,15 +127,5 @@
     </div>
 </div>
 <!-- /.center -->
-
-<script src="{{ admin_asset("/vendor/laravel-admin/AdminLTE/plugins/jQuery/jQuery-2.1.4.min.js")}} "></script>
-<script src="{{ admin_asset("/vendor/laravel-admin/AdminLTE/bootstrap/js/bootstrap.min.js")}}"></script>
-
-<script>
-    $(function () {
-        $('input').focus();
-    });
-</script>
-
 </body>
 </html>

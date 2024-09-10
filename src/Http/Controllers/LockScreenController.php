@@ -38,8 +38,8 @@ class LockScreenController extends Controller
             $previous = session()->get(LockScreen::LOCK_KEY);
 
             session()->forget(LockScreen::LOCK_KEY);
-
-            return redirect($previous);
+            return redirect(config('admin.route.prefix'));
+            //return redirect($previous);
         }
 
         return back()->withInput()->withException(new \Exception('password incorrect'));

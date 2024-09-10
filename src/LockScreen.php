@@ -19,7 +19,7 @@ class LockScreen extends Extension
         return <<<HTML
 <li>
     <a href="{$url}">
-      <i class="fa fa-lock"></i>
+      <i class="fa icon-lock"></i>
     </a>
 </li>
 HTML;
